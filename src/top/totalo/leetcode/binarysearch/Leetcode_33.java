@@ -4,12 +4,12 @@ package top.totalo.leetcode.binarysearch;
  * 题目链接：<a href="https://leetcode.cn/problems/search-in-rotated-sorted-array/">33. 搜索旋转排序数组</a>
  *
  */
-public class SearchInRotatedSortedArray {
+public class Leetcode_33 {
     
     public static void main(String[] args) {
         int[] nums = {4, 5, 6, 7, 0, 1, 2};
         int target = 0;
-        System.out.println(new SearchInRotatedSortedArray().search(nums, target));
+        System.out.println(new Leetcode_33().search(nums, target));
     }
     
     public int search(int[] nums, int target) {
