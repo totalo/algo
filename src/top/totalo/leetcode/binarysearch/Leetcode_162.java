@@ -17,6 +17,7 @@ public class Leetcode_162 {
         int l = 0, r = nums.length - 1;
         while (l < r) {
             int mid = ((r - l) >> 1) + l;
+            // 若二分的位置 大于上一个数，说明该数在峰值的右侧 或者就是峰值，否则在峰值的左侧
             if (nums[mid] > nums[mid + 1]) {
                 r = mid;
             } else {
@@ -24,5 +25,10 @@ public class Leetcode_162 {
             }
         }
         return l;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(findPeakElement(new int[]{1,2,3,1})); // 2
+        System.out.println(findPeakElement(new int[]{1,2,1,3,5,6,4})); // 1 or 5
     }
 }
