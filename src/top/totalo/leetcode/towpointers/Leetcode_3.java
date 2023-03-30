@@ -18,6 +18,8 @@ public class Leetcode_3 {
         for (int i = 0; i < s.length(); i++) {
             // 如果当前字符出现过， 则移动左指针到大值
             if (map.containsKey(s.charAt(i))) {
+                // 这里之所以需要取最大值时，如 pwwkew 时，当遇到第二个w时,需要更新为第二个w的位置，而，bvbf时
+                // 遇到第二个b时，需要更新到v的下标而不是b，所以满足最大值的的逻辑
                 left = Math.max(left, map.get(s.charAt(i)) + 1);
             }
             map.put(s.charAt(i), i);
