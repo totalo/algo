@@ -32,7 +32,7 @@ public class Leetcode_142 {
             fast = fast.next.next;
             // 如果存在相等的情况，说明有环
             if (slow == fast) {
-                // 因为此时slow走了一定的步长。如果有环，则
+                // 根据分析的性质，此时，slow再c步到达环的入口，而head走c步后距离入口的距离刚刚好手环的倍数，接着循环，二者相遇时，一定是入口
                 while (slow != head) {
                     slow = slow.next;
                     head = head.next;
